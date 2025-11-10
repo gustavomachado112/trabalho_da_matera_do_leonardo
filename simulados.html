@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulados - VestibulandoBR</title>
+    <link rel="stylesheet" href="simulados.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> VestibulandoBR</h1>
+                <span>Cursinho Pré-Vestibular</span>
+            </div>
+            
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Matérias</a></li>
+                    <li><a href="simulados.html" class="ativo"><i class="fas fa-file-alt"></i> Simulados</a></li>
+                    <li><a href="desempenho.html"><i class="fas fa-chart-bar"></i> Desempenho</a></li>
+                    <li><a href="cronograma.html"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-usuario">
+                <div class="info-usuario">
+                    <img src="https://ui-avatars.com/api/?name=Aluno+Brasil&background=009c3b&color=fff" alt="Aluno">
+                    <span>João Silva</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="container">
+            <div class="cabecalho-pagina">
+                <h1><i class="fas fa-file-alt"></i> Simulados</h1>
+                <p>Pratique com simulados reais e acompanhe sua evolução</p>
+            </div>
+
+            <div class="filtros-simulados">
+                <div class="filtro-grupo">
+                    <label for="tipo-simulado">Tipo de Simulado:</label>
+                    <select id="tipo-simulado">
+                        <option value="todos">Todos os simulados</option>
+                        <option value="enem">ENEM</option>
+                        <option value="fuvest">Fuvest</option>
+                        <option value="unicamp">Unicamp</option>
+                        <option value="geral">Geral</option>
+                    </select>
+                </div>
+                <div class="filtro-grupo">
+                    <label for="status-simulado">Status:</label>
+                    <select id="status-simulado">
+                        <option value="todos">Todos</option>
+                        <option value="disponivel">Disponíveis</option>
+                        <option value="andamento">Em Andamento</option>
+                        <option value="concluido">Concluídos</option>
+                    </select>
+                </div>
+                <div class="filtro-grupo">
+                    <label for="ordenar-por">Ordenar por:</label>
+                    <select id="ordenar-por">
+                        <option value="data">Data</option>
+                        <option value="nome">Nome</option>
+                        <option value="desempenho">Desempenho</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="estatisticas-rapidas">
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>28</h3>
+                        <p>Simulados Realizados</p>
+                    </div>
+                </div>
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>76%</h3>
+                        <p>Taxa de Acertos</p>
+                    </div>
+                </div>
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>15º</h3>
+                        <p>Posição Média</p>
+                    </div>
+                </div>
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>85%</h3>
+                        <p>Meta de Estudo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proximo-simulado">
+                <div class="cabecalho-secao">
+                    <h2><i class="fas fa-bell"></i> Próximo Simulado</h2>
+                    <span class="destaque">Inscrições Abertas</span>
+                </div>
+                <div class="info-simulado-destaque">
+                    <div class="detalhes-simulado">
+                        <div class="data-simulado">
+                            <div class="badge-data">
+                                <span class="dia">30</span>
+                                <span class="mes">NOV</span>
+                            </div>
+                            <div class="info-data">
+                                <h3>Simulado ENEM 2024 - 2ª Fase</h3>
+                                <p>Domingo, 30 de Novembro • 08:00 às 13:30</p>
+                            </div>
+                        </div>
+                        <div class="caracteristicas-simulado">
+                            <div class="caracteristica">
+                                <i class="fas fa-question-circle"></i>
+                                <span>180 questões</span>
+                            </div>
+                            <div class="caracteristica">
+                                <i class="fas fa-clock"></i>
+                                <span>5h30min de prova</span>
+                            </div>
+                            <div class="caracteristica">
+                                <i class="fas fa-users"></i>
+                                <span>Participantes: 280</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acoes-simulado">
+                        <button class="botao-inscrever">
+                            <i class="fas fa-pencil-alt"></i> Inscrever-se
+                        </button>
+                        <div class="contagem-regressiva">
+                            <p>Faltam: <strong>5 dias, 12 horas, 30 minutos</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secao-simulados">
+                <div class="cabecalho-secao">
+                    <h2><i class="fas fa-play-circle"></i> Simulados Disponíveis</h2>
+                </div>
+
+                <div class="grade-simulados">
+                    <div class="cartao-simulado">
+                        <div class="cabecalho-cartao">
+                            <span class="tag-simulado enem">ENEM</span>
+                            <span class="status disponivel">Disponível</span>
+                        </div>
+                        <div class="conteudo-cartao">
+                            <h3>ENEM - Ciências da Natureza</h3>
+                            <p>45 questões • 2h15min de prova</p>
+                            <div class="detalhes-prova">
+                                <div class="detalhe">
+                                    <i class="fas fa-flask"></i>
+                                    <span>Química: 15 questões</span>
+                                </div>
+                                <div class="detalhe">
+                                    <i class="fas fa-atom"></i>
+                                    <span>Física: 15 questões</span>
+                                </div>
+                                <div class="detalhe">
+                                    <i class="fas fa-dna"></i>
+                                    <span>Biologia: 15 questões</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rodape-cartao">
+                            <button class="botao-iniciar">
+                                <i class="fas fa-play"></i> Iniciar Prova
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cartao-simulado">
+                        <div class="cabecalho-cartao">
+                            <span class="tag-simulado fuvest">FUVEST</span>
+                            <span class="status disponivel">Disponível</span>
+                        </div>
+                        <div class="conteudo-cartao">
+                            <h3>Fuvest - 1ª Fase Completa</h3>
+                            <p>90 questões • 5h de prova</p>
+                            <div class="detalhes-prova">
+                                <div class="detalhe">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Matemática: 30 questões</span>
+                                </div>
+                                <div class="detalhe">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <span>Português: 25 questões</span>
+                                </div>
+                                <div class="detalhe">
+                                    <i class="fas fa-globe-americas"></i>
+                                    <span>Conhecimentos Gerais: 35 questões</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rodape-cartao">
+                            <button class="botao-iniciar">
+                                <i class="fas fa-play"></i> Iniciar Prova
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cartao-simulado">
+                        <div class="cabecalho-cartao">
+                            <span class="tag-simulado unicamp">UNICAMP</span>
+                            <span class="status disponivel">Disponível</span>
+                        </div>
+                        <div class="conteudo-cartao">
+                            <h3>Unicamp - 1ª Fase</h3>
+                            <p>72 questões • 4h de prova</p>
+                            <div class="detalhes-prova">
+                                <div class="detalhe">
+                                    <i class="fas fa-book"></i>
+                                    <span>Linguagens: 24 questões</span>
+                                </div>
+                                <div class="detalhe">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Matemática: 24 questões</span>
+                                </div>
+                                <div class="detalhe">
+                                    <i class="fas fa-flask"></i>
+                                    <span>Ciências: 24 questões</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rodape-cartao">
+                            <button class="botao-iniciar">
+                                <i class="fas fa-play"></i> Iniciar Prova
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secao-simulados">
+                <div class="cabecalho-secao">
+                    <h2><i class="fas fa-history"></i> Simulados Realizados</h2>
+                    <a href="#" class="link-ver-todos">Ver todos <i class="fas fa-chevron-right"></i></a>
+                </div>
+
+                <div class="tabela-simulados">
+                    <div class="cabecalho-tabela">
+                        <div class="coluna">Simulado</div>
+                        <div class="coluna">Data</div>
+                        <div class="coluna">Acertos</div>
+                        <div class="coluna">Desempenho</div>
+                        <div class="coluna">Posição</div>
+                        <div class="coluna">Ações</div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>ENEM Completo - Fase 2</strong>
+                            <span>180 questões • 5h30min</span>
+                        </div>
+                        <div class="coluna">25/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">142</span>/180
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-desempenho">
+                                <div class="preenchimento" style="width: 79%"></div>
+                            </div>
+                            <span>79%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">15º</span>/280
+                        </div>
+                        <div class="coluna">
+                            <button class="botao-acao" title="Ver Gabarito">
+                                <i class="fas fa-list-alt"></i>
+                            </button>
+                            <button class="botao-acao" title="Ver Correção">
+                                <i class="fas fa-chart-bar"></i>
+                            </button>
+                            <button class="botao-acao" title="Refazer Prova">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>Fuvest - 1ª Fase</strong>
+                            <span>90 questões • 5h</span>
+                        </div>
+                        <div class="coluna">18/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">68</span>/90
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-desempenho">
+                                <div class="preenchimento" style="width: 76%"></div>
+                            </div>
+                            <span>76%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">22º</span>/195
+                        </div>
+                        <div class="coluna">
+                            <button class="botao-acao" title="Ver Gabarito">
+                                <i class="fas fa-list-alt"></i>
+                            </button>
+                            <button class="botao-acao" title="Ver Correção">
+                                <i class="fas fa-chart-bar"></i>
+                            </button>
+                            <button class="botao-acao" title="Refazer Prova">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>Unicamp - 1ª Fase</strong>
+                            <span>72 questões • 4h</span>
+                        </div>
+                        <div class="coluna">12/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">52</span>/72
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-desempenho">
+                                <div class="preenchimento" style="width: 72%"></div>
+                            </div>
+                            <span>72%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">18º</span>/165
+                        </div>
+                        <div class="coluna">
+                            <button class="botao-acao" title="Ver Gabarito">
+                                <i class="fas fa-list-alt"></i>
+                            </button>
+                            <button class="botao-acao" title="Ver Correção">
+                                <i class="fas fa-chart-bar"></i>
+                            </button>
+                            <button class="botao-acao" title="Refazer Prova">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>Simulado Geral - Matemática</strong>
+                            <span>40 questões • 2h</span>
+                        </div>
+                        <div class="coluna">05/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">34</span>/40
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-desempenho">
+                                <div class="preenchimento" style="width: 85%"></div>
+                            </div>
+                            <span>85%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">8º</span>/120
+                        </div>
+                        <div class="coluna">
+                            <button class="botao-acao" title="Ver Gabarito">
+                                <i class="fas fa-list-alt"></i>
+                            </button>
+                            <button class="botao-acao" title="Ver Correção">
+                                <i class="fas fa-chart-bar"></i>
+                            </button>
+                            <button class="botao-acao" title="Refazer Prova">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secao-simulados">
+                <div class="cabecalho-secao">
+                    <h2><i class="fas fa-trophy"></i> Meus Melhores Resultados</h2>
+                </div>
+
+                <div class="grade-melhores-resultados">
+                    <div class="cartao-resultado">
+                        <div class="posicao-destaque">1º</div>
+                        <div class="info-resultado">
+                            <h4>Simulado Geral - Matemática</h4>
+                            <p>85% de acertos</p>
+                            <span class="data-resultado">05/11/2024</span>
+                        </div>
+                        <div class="medalha">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+
+                    <div class="cartao-resultado">
+                        <div class="posicao-destaque">2º</div>
+                        <div class="info-resultado">
+                            <h4>ENEM Completo - Fase 2</h4>
+                            <p>79% de acertos</p>
+                            <span class="data-resultado">25/11/2024</span>
+                        </div>
+                        <div class="medalha">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+
+                    <div class="cartao-resultado">
+                        <div class="posicao-destaque">3º</div>
+                        <div class="info-resultado">
+                            <h4>Fuvest - 1ª Fase</h4>
+                            <p>76% de acertos</p>
+                            <span class="data-resultado">18/11/2024</span>
+                        </div>
+                        <div class="medalha">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dicas-simulados">
+                <div class="cabecalho-secao">
+                    <h2><i class="fas fa-lightbulb"></i> Dicas para Simulados</h2>
+                </div>
+                <div class="lista-dicas">
+                    <div class="dica-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="conteudo-dica">
+                            <h4>Controle o Tempo</h4>
+                            <p>Pratique com o tempo real da prova para se adaptar ao ritmo</p>
+                        </div>
+                    </div>
+                    <div class="dica-item">
+                        <i class="fas fa-utensils"></i>
+                        <div class="conteudo-dica">
+                            <h4>Alimentação Adequada</h4>
+                            <p>Mantenha uma alimentação leve antes da prova</p>
+                        </div>
+                    </div>
+                    <div class="dica-item">
+                        <i class="fas fa-bed"></i>
+                        <div class="conteudo-dica">
+                            <h4>Descanse Bem</h4>
+                            <p>Tenha uma boa noite de sono antes do simulado</p>
+                        </div>
+                    </div>
+                    <div class="dica-item">
+                        <i class="fas fa-book"></i>
+                        <div class="conteudo-dica">
+                            <h4>Revise o Conteúdo</h4>
+                            <p>Faça uma revisão geral um dia antes da prova</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="conteudo-rodape">
+                <div class="secao-rodape">
+                    <h4>VestibulandoBR</h4>
+                    <p>Preparando você para o sucesso nos vestibulares mais concorridos do Brasil.</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> contato@vestibulandobr.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Redes Sociais</h4>
+                    <div class="links-sociais">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="base-rodape">
+                <p>&copy; 2024 VestibulandoBR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
