@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho - VestibulandoBR</title>
+    <link rel="stylesheet" href="desempenho.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> VestibulandoBR</h1>
+                <span>Cursinho Pré-Vestibular</span>
+            </div>
+            
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Matérias</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Simulados</a></li>
+                    <li><a href="desempenho.html" class="ativo"><i class="fas fa-chart-bar"></i> Desempenho</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-usuario">
+                <div class="info-usuario">
+                    <img src="https://ui-avatars.com/api/?name=Aluno+Brasil&background=009c3b&color=fff" alt="Aluno">
+                    <span>João Silva</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="container">
+            <div class="cabecalho-pagina">
+                <h1><i class="fas fa-chart-line"></i> Meu Desempenho</h1>
+                <p>Acompanhe sua evolução e identifique pontos de melhoria</p>
+            </div>
+
+            <div class="resumo-desempenho">
+                <div class="cartao-resumo">
+                    <div class="icone-resumo">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="conteudo-resumo">
+                        <h3>78%</h3>
+                        <p>Taxa de Acertos Geral</p>
+                        <span class="variacao positiva">+5% este mês</span>
+                    </div>
+                </div>
+
+                <div class="cartao-resumo">
+                    <div class="icone-resumo">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="conteudo-resumo">
+                        <h3>142h</h3>
+                        <p>Horas Estudadas</p>
+                        <span class="variacao positiva">+18h esta semana</span>
+                    </div>
+                </div>
+
+                <div class="cartao-resumo">
+                    <div class="icone-resumo">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="conteudo-resumo">
+                        <h3>28</h3>
+                        <p>Simulados Realizados</p>
+                        <span class="variacao positiva">+3 este mês</span>
+                    </div>
+                </div>
+
+                <div class="cartao-resumo">
+                    <div class="icone-resumo">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <div class="conteudo-resumo">
+                        <h3>16</h3>
+                        <p>Redações Corrigidas</p>
+                        <span class="variacao negativa">-2 esta semana</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="graficos-principais">
+                <div class="grafico-container">
+                    <div class="cabecalho-grafico">
+                        <h3>Evolução de Acertos</h3>
+                        <select class="seletor-periodo">
+                            <option value="semana">Última Semana</option>
+                            <option value="mes" selected>Último Mês</option>
+                            <option value="trimestre">Último Trimestre</option>
+                        </select>
+                    </div>
+                    <div class="area-grafico">
+                        <div class="grafico-linhas">
+                            <div class="linha-grafico">
+                                <span class="rotulo-eixo">100%</span>
+                                <div class="linha"></div>
+                            </div>
+                            <div class="linha-grafico">
+                                <span class="rotulo-eixo">80%</span>
+                                <div class="linha"></div>
+                            </div>
+                            <div class="linha-grafico">
+                                <span class="rotulo-eixo">60%</span>
+                                <div class="linha"></div>
+                            </div>
+                            <div class="linha-grafico">
+                                <span class="rotulo-eixo">40%</span>
+                                <div class="linha"></div>
+                            </div>
+                            <div class="linha-grafico">
+                                <span class="rotulo-eixo">20%</span>
+                                <div class="linha"></div>
+                            </div>
+                            
+                            <div class="dados-grafico">
+                                <div class="ponto-grafico" style="left: 10%; bottom: 55%;" data-valor="55%"></div>
+                                <div class="ponto-grafico" style="left: 25%; bottom: 62%;" data-valor="62%"></div>
+                                <div class="ponto-grafico" style="left: 40%; bottom: 68%;" data-valor="68%"></div>
+                                <div class="ponto-grafico" style="left: 55%; bottom: 72%;" data-valor="72%"></div>
+                                <div class="ponto-grafico" style="left: 70%; bottom: 78%;" data-valor="78%"></div>
+                                <div class="ponto-grafico" style="left: 85%; bottom: 75%;" data-valor="75%"></div>
+                                
+                                <div class="linha-evolucao"></div>
+                            </div>
+
+                            <div class="eixo-x">
+                                <span>Sem 1</span>
+                                <span>Sem 2</span>
+                                <span>Sem 3</span>
+                                <span>Sem 4</span>
+                                <span>Sem 5</span>
+                                <span>Esta</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grafico-container">
+                    <div class="cabecalho-grafico">
+                        <h3>Distribuição por Matéria</h3>
+                    </div>
+                    <div class="grafico-barras">
+                        <div class="barra-materia">
+                            <span class="nome-materia">Matemática</span>
+                            <div class="barra-container">
+                                <div class="barra" style="width: 85%">
+                                    <span class="porcentagem">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="barra-materia">
+                            <span class="nome-materia">Português</span>
+                            <div class="barra-container">
+                                <div class="barra" style="width: 78%">
+                                    <span class="porcentagem">78%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="barra-materia">
+                            <span class="nome-materia">Física</span>
+                            <div class="barra-container">
+                                <div class="barra" style="width: 65%">
+                                    <span class="porcentagem">65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="barra-materia">
+                            <span class="nome-materia">Química</span>
+                            <div class="barra-container">
+                                <div class="barra" style="width: 70%">
+                                    <span class="porcentagem">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="barra-materia">
+                            <span class="nome-materia">Biologia</span>
+                            <div class="barra-container">
+                                <div class="barra" style="width: 72%">
+                                    <span class="porcentagem">72%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="barra-materia">
+                            <span class="nome-materia">História</span>
+                            <div class="barra-container">
+                                <div class="barra" style="width: 80%">
+                                    <span class="porcentagem">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detalhes-simulados">
+                <div class="cabecalho-secao">
+                    <h3>Últimos Simulados</h3>
+                    <a href="#" class="link-ver-todos">Ver todos <i class="fas fa-chevron-right"></i></a>
+                </div>
+
+                <div class="tabela-simulados">
+                    <div class="cabecalho-tabela">
+                        <div class="coluna">Simulado</div>
+                        <div class="coluna">Data</div>
+                        <div class="coluna">Acertos</div>
+                        <div class="coluna">Desempenho</div>
+                        <div class="coluna">Posição</div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>ENEM Completo - Fase 2</strong>
+                            <span>180 questões</span>
+                        </div>
+                        <div class="coluna">25/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">142</span>/180
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-pequena">
+                                <div class="preenchimento" style="width: 79%"></div>
+                            </div>
+                            <span>79%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">15º</span>/280
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>Fuvest - 1ª Fase</strong>
+                            <span>90 questões</span>
+                        </div>
+                        <div class="coluna">18/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">68</span>/90
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-pequena">
+                                <div class="preenchimento" style="width: 76%"></div>
+                            </div>
+                            <span>76%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">22º</span>/195
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>Unicamp - 1ª Fase</strong>
+                            <span>72 questões</span>
+                        </div>
+                        <div class="coluna">12/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">52</span>/72
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-pequena">
+                                <div class="preenchimento" style="width: 72%"></div>
+                            </div>
+                            <span>72%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">18º</span>/165
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela">
+                        <div class="coluna">
+                            <strong>Simulado Geral</strong>
+                            <span>120 questões</span>
+                        </div>
+                        <div class="coluna">05/11/2024</div>
+                        <div class="coluna">
+                            <span class="destaque">88</span>/120
+                        </div>
+                        <div class="coluna">
+                            <div class="barra-pequena">
+                                <div class="preenchimento" style="width: 73%"></div>
+                            </div>
+                            <span>73%</span>
+                        </div>
+                        <div class="coluna">
+                            <span class="posicao destaque">25º</span>/210
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="areas-melhoria">
+                <div class="cabecalho-secao">
+                    <h3>Áreas para Melhorar</h3>
+                </div>
+
+                <div class="lista-melhorias">
+                    <div class="item-melhoria">
+                        <div class="info-melhoria">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="detalhes-melhoria">
+                                <h4>Química Orgânica</h4>
+                                <p>Taxa de acertos: 45% • Necessita revisão urgente</p>
+                            </div>
+                        </div>
+                        <button class="botao-acao">Estudar Agora</button>
+                    </div>
+
+                    <div class="item-melhoria">
+                        <div class="info-melhoria">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div class="detalhes-melhoria">
+                                <h4>Geometria Espacial</h4>
+                                <p>Taxa de acertos: 52% • Praticar exercícios</p>
+                            </div>
+                        </div>
+                        <button class="botao-acao">Praticar</button>
+                    </div>
+
+                    <div class="item-melhoria">
+                        <div class="info-melhoria">
+                            <i class="fas fa-info-circle"></i>
+                            <div class="detalhes-melhoria">
+                                <h4>Literatura Brasileira</h4>
+                                <p>Taxa de acertos: 58% • Revisar autores</p>
+                            </div>
+                        </div>
+                        <button class="botao-acao">Revisar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metas-progresso">
+                <div class="cabecalho-secao">
+                    <h3>Metas de Estudo</h3>
+                    <a href="#" class="link-ver-todos">Definir metas <i class="fas fa-chevron-right"></i></a>
+                </div>
+
+                <div class="lista-metas">
+                    <div class="item-meta">
+                        <div class="info-meta">
+                            <h4>Completar 20h de estudo semanal</h4>
+                            <p>Progresso: 15h/20h esta semana</p>
+                            <div class="barra-progresso-meta">
+                                <div class="preenchimento" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <span class="status-meta andamento">Em Andamento</span>
+                    </div>
+
+                    <div class="item-meta">
+                        <div class="info-meta">
+                            <h4>Fazer 2 simulados por mês</h4>
+                            <p>Progresso: 1/2 este mês</p>
+                            <div class="barra-progresso-meta">
+                                <div class="preenchimento" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <span class="status-meta andamento">Em Andamento</span>
+                    </div>
+
+                    <div class="item-meta">
+                        <div class="info-meta">
+                            <h4>Alcançar 80% de acertos em Matemática</h4>
+                            <p>Atual: 85% • Meta alcançada!</p>
+                            <div class="barra-progresso-meta">
+                                <div class="preenchimento" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <span class="status-meta concluido">Concluído</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="conteudo-rodape">
+                <div class="secao-rodape">
+                    <h4>VestibulandoBR</h4>
+                    <p>Preparando você para o sucesso nos vestibulares mais concorridos do Brasil.</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> contato@vestibulandobr.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Redes Sociais</h4>
+                    <div class="links-sociais">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="base-rodape">
+                <p>&copy; 2024 VestibulandoBR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
