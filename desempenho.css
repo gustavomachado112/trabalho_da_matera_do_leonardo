@@ -12,9 +12,6 @@
     --cinza-claro: #f8f9fa;
     --cinza-medio: #e9ecef;
     --cinza-escuro: #495057;
-    --verde-sucesso: #28a745;
-    --vermelho-alerta: #dc3545;
-    --laranja-atencao: #fd7e14;
 }
 
 body {
@@ -66,45 +63,12 @@ body {
     transition: color 0.3s ease;
 }
 
-.navegacao a:hover {
+.navegacao a:hover, .navegacao a.ativo {
     color: var(--amarelo-brasil);
-}
-
-.navegacao a.ativo {
-    color: var(--amarelo-brasil);
-    border-bottom: 2px solid var(--amarelo-brasil);
 }
 
 .navegacao i {
     margin-right: 8px;
-}
-
-.menu-usuario {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.info-usuario {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 8px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    transition: background 0.3s ease;
-}
-
-.info-usuario:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.info-usuario img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid var(--amarelo-brasil);
 }
 
 .principal {
@@ -187,12 +151,12 @@ body {
 
 .variacao.positiva {
     background: #e8f5e8;
-    color: var(--verde-sucesso);
+    color: #28a745;
 }
 
 .variacao.negativa {
     background: #fde8e8;
-    color: var(--vermelho-alerta);
+    color: #dc3545;
 }
 
 .graficos-principais {
@@ -229,48 +193,27 @@ body {
     font-size: 0.9em;
 }
 
-.area-grafico {
+.grafico-simples {
     height: 250px;
     position: relative;
-}
-
-.grafico-linhas {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+    border-left: 1px solid var(--cinza-medio);
+    border-bottom: 1px solid var(--cinza-medio);
 }
 
 .linha-grafico {
-    display: flex;
-    align-items: center;
-    height: 20%;
+    border-top: 1px solid var(--cinza-medio);
+    position: relative;
 }
 
-.rotulo-eixo {
-    width: 40px;
-    color: var(--cinza-escuro);
-    font-size: 0.8em;
-    font-weight: 500;
-}
-
-.linha {
-    flex: 1;
-    height: 1px;
-    background: var(--cinza-medio);
-    margin-left: 10px;
-}
-
-.dados-grafico {
+.pontos-evolucao {
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 0;
 }
 
-.ponto-grafico {
+.ponto {
     position: absolute;
     width: 12px;
     height: 12px;
@@ -281,43 +224,11 @@ body {
     transform: translate(-50%, 50%);
 }
 
-.ponto-grafico::after {
-    content: attr(data-valor);
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--azul-brasil);
-    color: var(--branco);
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 0.7em;
-    white-space: nowrap;
-}
-
-.linha-evolucao {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, 
-        transparent 10%, 
-        var(--verde-brasil) 10% 25%, 
-        transparent 25% 40%, 
-        var(--verde-brasil) 40% 55%, 
-        transparent 55% 70%, 
-        var(--verde-brasil) 70% 85%, 
-        transparent 85%);
-    background-size: 100% 100%;
-    opacity: 0.3;
-}
-
 .eixo-x {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    padding-left: 50px;
+    padding-left: 10px;
 }
 
 .eixo-x span {
@@ -358,7 +269,6 @@ body {
     height: 100%;
     background: linear-gradient(90deg, var(--verde-brasil), var(--azul-brasil));
     border-radius: 12px;
-    transition: width 0.5s ease;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -412,7 +322,7 @@ body {
 
 .cabecalho-tabela {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 15px;
     padding: 15px 0;
     border-bottom: 2px solid var(--cinza-medio);
@@ -422,7 +332,7 @@ body {
 
 .linha-tabela {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 15px;
     padding: 20px 0;
     border-bottom: 1px solid var(--cinza-medio);
@@ -469,10 +379,6 @@ body {
     border-radius: 3px;
 }
 
-.posicao {
-    font-weight: 600;
-}
-
 .areas-melhoria {
     background: var(--branco);
     padding: 25px;
@@ -494,7 +400,7 @@ body {
     padding: 20px;
     background: var(--cinza-claro);
     border-radius: 8px;
-    border-left: 4px solid var(--laranja-atencao);
+    border-left: 4px solid #fd7e14;
 }
 
 .info-melhoria {
@@ -505,7 +411,7 @@ body {
 
 .info-melhoria i {
     font-size: 1.5em;
-    color: var(--laranja-atencao);
+    color: #fd7e14;
 }
 
 .detalhes-melhoria h4 {
@@ -521,11 +427,10 @@ body {
 .botao-acao {
     background: var(--verde-brasil);
     color: var(--branco);
-    border: none;
     padding: 10px 20px;
     border-radius: 6px;
     font-weight: 600;
-    cursor: pointer;
+    text-decoration: none;
     transition: background 0.3s ease;
 }
 
@@ -578,7 +483,6 @@ body {
     height: 100%;
     background: linear-gradient(90deg, var(--verde-brasil), var(--azul-brasil));
     border-radius: 4px;
-    transition: width 0.5s ease;
 }
 
 .status-meta {
