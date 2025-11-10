@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matérias - VestibulandoBR</title>
+    <link rel="stylesheet" href="materias.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> VestibulandoBR</h1>
+                <span>Cursinho Pré-Vestibular</span>
+            </div>
+            
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="materias.html" class="ativo"><i class="fas fa-book"></i> Matérias</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Simulados</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Desempenho</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-usuario">
+                <div class="info-usuario">
+                    <img src="https://ui-avatars.com/api/?name=Aluno+Brasil&background=009c3b&color=fff" alt="Aluno">
+                    <span>João Silva</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="container">
+            <div class="cabecalho-pagina">
+                <h1><i class="fas fa-book"></i> Matérias</h1>
+                <p>Explore todo o conteúdo do vestibular organizado por disciplina</p>
+            </div>
+
+            <div class="filtros">
+                <div class="filtro-grupo">
+                    <label for="filtro-disciplina">Filtrar por disciplina:</label>
+                    <select id="filtro-disciplina">
+                        <option value="todas">Todas as disciplinas</option>
+                        <option value="matematica">Matemática</option>
+                        <option value="portugues">Português</option>
+                        <option value="fisica">Física</option>
+                        <option value="quimica">Química</option>
+                        <option value="biologia">Biologia</option>
+                        <option value="historia">História</option>
+                        <option value="geografia">Geografia</option>
+                    </select>
+                </div>
+                <div class="filtro-grupo">
+                    <label for="filtro-status">Filtrar por status:</label>
+                    <select id="filtro-status">
+                        <option value="todos">Todos</option>
+                        <option value="concluido">Concluídos</option>
+                        <option value="andamento">Em andamento</option>
+                        <option value="pendente">Pendentes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="estatisticas-gerais">
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>45%</h3>
+                        <p>Concluído</p>
+                    </div>
+                </div>
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>35%</h3>
+                        <p>Em Andamento</p>
+                    </div>
+                </div>
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>20%</h3>
+                        <p>Pendente</p>
+                    </div>
+                </div>
+                <div class="cartao-estatistica">
+                    <div class="icone-estatistica">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="conteudo-estatistica">
+                        <h3>128</h3>
+                        <p>Aulas Assistidas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grade-materias">
+                <!-- Matemática -->
+                <section class="materia-categoria">
+                    <div class="cabecalho-materia">
+                        <div class="info-materia">
+                            <i class="fas fa-calculator"></i>
+                            <h2>Matemática</h2>
+                        </div>
+                        <div class="progresso-materia">
+                            <span>68% concluído</span>
+                            <div class="barra-progresso">
+                                <div class="preenchimento-progresso" style="width: 68%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lista-topicos">
+                        <div class="topico concluido">
+                            <div class="status-topico">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Álgebra Básica</h4>
+                                <p>Equações, inequações e sistemas lineares</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 12 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 5 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-revisar">Revisar</button>
+                        </div>
+
+                        <div class="topico concluido">
+                            <div class="status-topico">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Geometria Plana</h4>
+                                <p>Ângulos, triângulos, polígonos e círculos</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 15 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 8 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-revisar">Revisar</button>
+                        </div>
+
+                        <div class="topico andamento">
+                            <div class="status-topico">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Geometria Espacial</h4>
+                                <p>Prismas, pirâmides, cilindros e cones</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 10 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 6 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-continuar">Continuar</button>
+                        </div>
+
+                        <div class="topico pendente">
+                            <div class="status-topico">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Trigonometria</h4>
+                                <p>Razões trigonométricas e identidades</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 8 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 4 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-comecar">Começar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Português -->
+                <section class="materia-categoria">
+                    <div class="cabecalho-materia">
+                        <div class="info-materia">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Português</h2>
+                        </div>
+                        <div class="progresso-materia">
+                            <span>52% concluído</span>
+                            <div class="barra-progresso">
+                                <div class="preenchimento-progresso" style="width: 52%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lista-topicos">
+                        <div class="topico concluido">
+                            <div class="status-topico">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Gramática</h4>
+                                <p>Morfologia, sintaxe e semântica</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 20 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 12 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-revisar">Revisar</button>
+                        </div>
+
+                        <div class="topico andamento">
+                            <div class="status-topico">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Literatura</h4>
+                                <p>Escolas literárias e autores brasileiros</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 15 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 8 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-continuar">Continuar</button>
+                        </div>
+
+                        <div class="topico pendente">
+                            <div class="status-topico">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Interpretação de Texto</h4>
+                                <p>Estratégias de leitura e compreensão</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 10 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 6 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-comecar">Começar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Física -->
+                <section class="materia-categoria">
+                    <div class="cabecalho-materia">
+                        <div class="info-materia">
+                            <i class="fas fa-atom"></i>
+                            <h2>Física</h2>
+                        </div>
+                        <div class="progresso-materia">
+                            <span>35% concluído</span>
+                            <div class="barra-progresso">
+                                <div class="preenchimento-progresso" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lista-topicos">
+                        <div class="topico concluido">
+                            <div class="status-topico">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Mecânica</h4>
+                                <p>Cinemática, dinâmica e estática</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 18 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 10 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-revisar">Revisar</button>
+                        </div>
+
+                        <div class="topico andamento">
+                            <div class="status-topico">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Termodinâmica</h4>
+                                <p>Calor, temperatura e leis da termodinâmica</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 12 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 7 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-continuar">Continuar</button>
+                        </div>
+
+                        <div class="topico pendente">
+                            <div class="status-topico">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Óptica</h4>
+                                <p>Reflexão, refração e lentes</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 8 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 5 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-comecar">Começar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Química -->
+                <section class="materia-categoria">
+                    <div class="cabecalho-materia">
+                        <div class="info-materia">
+                            <i class="fas fa-flask"></i>
+                            <h2>Química</h2>
+                        </div>
+                        <div class="progresso-materia">
+                            <span>42% concluído</span>
+                            <div class="barra-progresso">
+                                <div class="preenchimento-progresso" style="width: 42%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lista-topicos">
+                        <div class="topico concluido">
+                            <div class="status-topico">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Química Geral</h4>
+                                <p>Matéria, átomos e tabela periódica</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 14 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 8 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-revisar">Revisar</button>
+                        </div>
+
+                        <div class="topico andamento">
+                            <div class="status-topico">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Química Orgânica</h4>
+                                <p>Hidrocarbonetos, funções orgânicas e reações</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 16 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 9 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-continuar">Continuar</button>
+                        </div>
+
+                        <div class="topico pendente">
+                            <div class="status-topico">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="conteudo-topico">
+                                <h4>Físico-Química</h4>
+                                <p>Termoquímica, eletroquímica e cinética</p>
+                                <div class="meta-topico">
+                                    <span><i class="fas fa-play-circle"></i> 12 aulas</span>
+                                    <span><i class="fas fa-file-alt"></i> 7 exercícios</span>
+                                </div>
+                            </div>
+                            <button class="botao-comecar">Começar</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="recursos-adicionais">
+                <h3>Recursos de Estudo</h3>
+                <div class="grade-recursos">
+                    <div class="cartao-recurso">
+                        <i class="fas fa-download"></i>
+                        <h4>Materiais em PDF</h4>
+                        <p>Resumos e apostilas para download</p>
+                        <button class="botao-recurso">Acessar</button>
+                    </div>
+                    <div class="cartao-recurso">
+                        <i class="fas fa-video"></i>
+                        <h4>Videoaulas</h4>
+                        <p>Conteúdo completo em vídeo</p>
+                        <button class="botao-recurso">Assistir</button>
+                    </div>
+                    <div class="cartao-recurso">
+                        <i class="fas fa-question-circle"></i>
+                        <h4>Dúvidas</h4>
+                        <p>Tire suas dúvidas com professores</p>
+                        <button class="botao-recurso">Perguntar</button>
+                    </div>
+                    <div class="cartao-recurso">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Desempenho</h4>
+                        <p>Acompanhe seu progresso detalhado</p>
+                        <button class="botao-recurso">Verificar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="conteudo-rodape">
+                <div class="secao-rodape">
+                    <h4>VestibulandoBR</h4>
+                    <p>Preparando você para o sucesso nos vestibulares mais concorridos do Brasil.</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> contato@vestibulandobr.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Redes Sociais</h4>
+                    <div class="links-sociais">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="base-rodape">
+                <p>&copy; 2024 VestibulandoBR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
