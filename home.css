@@ -63,40 +63,12 @@ body {
     transition: color 0.3s ease;
 }
 
-.navegacao a:hover {
+.navegacao a:hover, .navegacao a.ativo {
     color: var(--amarelo-brasil);
 }
 
 .navegacao i {
     margin-right: 8px;
-}
-
-.menu-usuario {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.info-usuario {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 8px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    transition: background 0.3s ease;
-}
-
-.info-usuario:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.info-usuario img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid var(--amarelo-brasil);
 }
 
 .principal {
@@ -132,7 +104,6 @@ body {
     background: var(--amarelo-brasil);
     height: 100%;
     border-radius: 10px;
-    transition: width 0.5s ease;
 }
 
 .grade-dashboard {
@@ -148,17 +119,15 @@ body {
     padding: 25px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .cartao-dashboard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .cartao-destaque {
     border-color: var(--amarelo-brasil);
-    background: linear-gradient(135deg, #fff 0%, #f8fffe 100%);
 }
 
 .cabecalho-cartao {
@@ -210,7 +179,6 @@ body {
 .info-aula p {
     color: var(--cinza-escuro);
     font-size: 0.9em;
-    margin-bottom: 5px;
 }
 
 .etiqueta {
@@ -265,7 +233,7 @@ body {
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
     transition: background 0.3s ease;
 }
 
@@ -308,17 +276,15 @@ body {
 .botao-primario {
     background: var(--amarelo-brasil);
     color: var(--azul-brasil);
-    border: none;
     padding: 12px 20px;
     border-radius: 8px;
     font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
 .botao-primario:hover {
     background: #ffd700;
-    transform: translateY(-2px);
 }
 
 .contagem-regressiva {
@@ -390,7 +356,6 @@ body {
     background: var(--verde-brasil);
     height: 100%;
     border-radius: 4px;
-    transition: width 0.5s ease;
 }
 
 .acoes-rapidas {
@@ -417,13 +382,12 @@ body {
     color: var(--azul-brasil);
     text-align: center;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     border: 2px solid transparent;
 }
 
 .cartao-acao:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     border-color: var(--amarelo-brasil);
 }
 
@@ -521,11 +485,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .grade-acoes {
-        grid-template-columns: 1fr;
-    }
-
-    .grade-estatisticas {
+    .grade-acoes, .grade-estatisticas {
         grid-template-columns: 1fr;
     }
 
