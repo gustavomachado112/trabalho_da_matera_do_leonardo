@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma - VestibulandoBR</title>
+    <link rel="stylesheet" href="cronograma.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> VestibulandoBR</h1>
+                <span>Cursinho Pré-Vestibular</span>
+            </div>
+            
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="materias.html"><i class="fas fa-book"></i> Matérias</a></li>
+                    <li><a href="simulados.html"><i class="fas fa-file-alt"></i> Simulados</a></li>
+                    <li><a href="desempenho.html"><i class="fas fa-chart-bar"></i> Desempenho</a></li>
+                    <li><a href="cronograma.html" class="ativo"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-usuario">
+                <div class="info-usuario">
+                    <img src="https://ui-avatars.com/api/?name=Aluno+Brasil&background=009c3b&color=fff" alt="Aluno">
+                    <span>João Silva</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="container">
+            <div class="cabecalho-pagina">
+                <h1><i class="fas fa-calendar-alt"></i> Meu Cronograma</h1>
+                <p>Organize seus estudos e acompanhe suas metas diárias</p>
+            </div>
+
+            <div class="controles-cronograma">
+                <div class="seletor-mes">
+                    <button class="botao-navegacao">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2>Novembro 2024</h2>
+                    <button class="botao-navegacao">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="botoes-visualizacao">
+                    <button class="botao-visualizacao ativo">Mensal</button>
+                    <button class="botao-visualizacao">Semanal</button>
+                    <button class="botao-visualizacao">Diário</button>
+                </div>
+
+                <div class="acoes-cronograma">
+                    <button class="botao-primario">
+                        <i class="fas fa-plus"></i> Nova Tarefa
+                    </button>
+                    <button class="botao-secundario">
+                        <i class="fas fa-print"></i> Imprimir
+                    </button>
+                </div>
+            </div>
+
+            <div class="visao-mensal">
+                <div class="cabecalho-calendario">
+                    <div class="dia-semana">Dom</div>
+                    <div class="dia-semana">Seg</div>
+                    <div class="dia-semana">Ter</div>
+                    <div class="dia-semana">Qua</div>
+                    <div class="dia-semana">Qui</div>
+                    <div class="dia-semana">Sex</div>
+                    <div class="dia-semana">Sáb</div>
+                </div>
+
+                <div class="grade-calendario">
+                    <!-- Semana 1 -->
+                    <div class="dia-calendario fora-mes">
+                        <span class="numero-dia">27</span>
+                    </div>
+                    <div class="dia-calendario fora-mes">
+                        <span class="numero-dia">28</span>
+                    </div>
+                    <div class="dia-calendario fora-mes">
+                        <span class="numero-dia">29</span>
+                    </div>
+                    <div class="dia-calendario fora-mes">
+                        <span class="numero-dia">30</span>
+                    </div>
+                    <div class="dia-calendario fora-mes">
+                        <span class="numero-dia">31</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">1</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa matematica">
+                                <span class="hora-tarefa">08:00</span>
+                                <span class="titulo-tarefa">Geometria Espacial</span>
+                            </div>
+                            <div class="tarefa portugues">
+                                <span class="hora-tarefa">14:00</span>
+                                <span class="titulo-tarefa">Literatura</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">2</span>
+                    </div>
+
+                    <!-- Semana 2 -->
+                    <div class="dia-calendario">
+                        <span class="numero-dia">3</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">4</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa fisica">
+                                <span class="hora-tarefa">10:00</span>
+                                <span class="titulo-tarefa">Termodinâmica</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario hoje">
+                        <span class="numero-dia">5</span>
+                        <div class="marcador-hoje">Hoje</div>
+                        <div class="tarefas-dia">
+                            <div class="tarefa simulados">
+                                <span class="hora-tarefa">09:00</span>
+                                <span class="titulo-tarefa">Simulado ENEM</span>
+                            </div>
+                            <div class="tarefa quimica">
+                                <span class="hora-tarefa">16:00</span>
+                                <span class="titulo-tarefa">Orgânica</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">6</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">7</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa biologia">
+                                <span class="hora-tarefa">11:00</span>
+                                <span class="titulo-tarefa">Genética</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">8</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">9</span>
+                    </div>
+
+                    <!-- Semana 3 -->
+                    <div class="dia-calendario">
+                        <span class="numero-dia">10</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">11</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa redacao">
+                                <span class="hora-tarefa">15:00</span>
+                                <span class="titulo-tarefa">Redação ENEM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">12</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">13</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa historia">
+                                <span class="hora-tarefa">13:00</span>
+                                <span class="titulo-tarefa">Brasil Colônia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">14</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">15</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa geografia">
+                                <span class="hora-tarefa">10:00</span>
+                                <span class="titulo-tarefa">Geografia Física</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">16</span>
+                    </div>
+
+                    <!-- Semana 4 -->
+                    <div class="dia-calendario">
+                        <span class="numero-dia">17</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">18</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa matematica">
+                                <span class="hora-tarefa">08:00</span>
+                                <span class="titulo-tarefa">Trigonometria</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">19</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">20</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa simulados">
+                                <span class="hora-tarefa">14:00</span>
+                                <span class="titulo-tarefa">Simulado Fuvest</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">21</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">22</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa quimica">
+                                <span class="hora-tarefa">16:00</span>
+                                <span class="titulo-tarefa">Físico-Química</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">23</span>
+                    </div>
+
+                    <!-- Semana 5 -->
+                    <div class="dia-calendario">
+                        <span class="numero-dia">24</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">25</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa portugues">
+                                <span class="hora-tarefa">09:00</span>
+                                <span class="titulo-tarefa">Gramática</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">26</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">27</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa redacao">
+                                <span class="hora-tarefa">15:00</span>
+                                <span class="titulo-tarefa">Redação Unicamp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">28</span>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">29</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa revisao">
+                                <span class="hora-tarefa">10:00</span>
+                                <span class="titulo-tarefa">Revisão Geral</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dia-calendario">
+                        <span class="numero-dia">30</span>
+                        <div class="tarefas-dia">
+                            <div class="tarefa simulados">
+                                <span class="hora-tarefa">08:00</span>
+                                <span class="titulo-tarefa">Simulado ENEM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="painel-lateral">
+                <div class="cartao-hoje">
+                    <div class="cabecalho-cartao">
+                        <h3><i class="fas fa-calendar-day"></i> Hoje</h3>
+                        <span class="data-hoje">25 de Novembro de 2024</span>
+                    </div>
+                    
+                    <div class="lista-tarefas-hoje">
+                        <div class="tarefa-item concluida">
+                            <div class="check-tarefa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="info-tarefa">
+                                <h4>Geometria Espacial</h4>
+                                <p>08:00 - 10:00 • Matemática</p>
+                            </div>
+                            <div class="acoes-tarefa">
+                                <button class="botao-acao"><i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="tarefa-item atrasada">
+                            <div class="check-tarefa">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-tarefa">
+                                <h4>Literatura Modernista</h4>
+                                <p>10:00 - 12:00 • Português</p>
+                            </div>
+                            <div class="acoes-tarefa">
+                                <button class="botao-acao"><i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="tarefa-item pendente">
+                            <div class="check-tarefa">
+                                <div class="circulo-pendente"></div>
+                            </div>
+                            <div class="info-tarefa">
+                                <h4>Termodinâmica</h4>
+                                <p>14:00 - 16:00 • Física</p>
+                            </div>
+                            <div class="acoes-tarefa">
+                                <button class="botao-acao"><i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="tarefa-item pendente">
+                            <div class="check-tarefa">
+                                <div class="circulo-pendente"></div>
+                            </div>
+                            <div class="info-tarefa">
+                                <h4>Exercícios Química</h4>
+                                <p>16:00 - 18:00 • Química</p>
+                            </div>
+                            <div class="acoes-tarefa">
+                                <button class="botao-acao"><i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-hoje">
+                        <div class="estatistica-hoje">
+                            <span class="valor">2/4</span>
+                            <span class="rotulo">Tarefas Concluídas</span>
+                        </div>
+                        <div class="estatistica-hoje">
+                            <span class="valor">5h</span>
+                            <span class="rotulo">Tempo Estudado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cartao-proximos-eventos">
+                    <div class="cabecalho-cartao">
+                        <h3><i class="fas fa-bell"></i> Próximos Eventos</h3>
+                    </div>
+
+                    <div class="lista-eventos">
+                        <div class="evento-item importante">
+                            <div class="icone-evento">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="info-evento">
+                                <h4>Simulado ENEM 2024</h4>
+                                <p>30 de Nov • 08:00</p>
+                            </div>
+                            <span class="tag-evento">Prova</span>
+                        </div>
+
+                        <div class="evento-item">
+                            <div class="icone-evento">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="info-evento">
+                                <h4>Entrega de Redação</h4>
+                                <p>27 de Nov • 23:59</p>
+                            </div>
+                            <span class="tag-evento">Prazo</span>
+                        </div>
+
+                        <div class="evento-item">
+                            <div class="icone-evento">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="info-evento">
+                                <h4>Aula de Revisão</h4>
+                                <p>29 de Nov • 19:00</p>
+                            </div>
+                            <span class="tag-evento">Ao Vivo</span>
+                        </div>
+
+                        <div class="evento-item">
+                            <div class="icone-evento">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="info-evento">
+                                <h4>Maratona Matemática</h4>
+                                <p>02 de Dez • 09:00</p>
+                            </div>
+                            <span class="tag-evento">Estudo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cartao-metas">
+                    <div class="cabecalho-cartao">
+                        <h3><i class="fas fa-bullseye"></i> Metas da Semana</h3>
+                    </div>
+
+                    <div class="lista-metas">
+                        <div class="meta-item">
+                            <div class="info-meta">
+                                <h4>20 horas de estudo</h4>
+                                <div class="barra-progresso-meta">
+                                    <div class="preenchimento" style="width: 65%"></div>
+                                </div>
+                                <span class="porcentagem-meta">13h/20h</span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <div class="info-meta">
+                                <h4>2 redações</h4>
+                                <div class="barra-progresso-meta">
+                                    <div class="preenchimento" style="width: 50%"></div>
+                                </div>
+                                <span class="porcentagem-meta">1/2</span>
+                            </div>
+                        </div>
+
+                        <div class="meta-item">
+                            <div class="info-meta">
+                                <h4>Revisar 5 matérias</h4>
+                                <div class="barra-progresso-meta">
+                                    <div class="preenchimento" style="width: 60%"></div>
+                                </div>
+                                <span class="porcentagem-meta">3/5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="conteudo-rodape">
+                <div class="secao-rodape">
+                    <h4>VestibulandoBR</h4>
+                    <p>Preparando você para o sucesso nos vestibulares mais concorridos do Brasil.</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> contato@vestibulandobr.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                </div>
+                <div class="secao-rodape">
+                    <h4>Redes Sociais</h4>
+                    <div class="links-sociais">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="base-rodape">
+                <p>&copy; 2024 VestibulandoBR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
