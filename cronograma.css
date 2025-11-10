@@ -1,0 +1,732 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-brasil: #009c3b;
+    --amarelo-brasil: #ffdf00;
+    --azul-brasil: #002776;
+    --branco: #ffffff;
+    --cinza-claro: #f8f9fa;
+    --cinza-medio: #e9ecef;
+    --cinza-escuro: #495057;
+    --verde-sucesso: #28a745;
+    --vermelho-alerta: #dc3545;
+    --laranja-atencao: #fd7e14;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cinza-claro);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, var(--verde-brasil) 0%, var(--azul-brasil) 100%);
+    color: var(--branco);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.logo span {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.navegacao ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navegacao a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navegacao a:hover {
+    color: var(--amarelo-brasil);
+}
+
+.navegacao a.ativo {
+    color: var(--amarelo-brasil);
+    border-bottom: 2px solid var(--amarelo-brasil);
+}
+
+.navegacao i {
+    margin-right: 8px;
+}
+
+.menu-usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.info-usuario:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.info-usuario img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--amarelo-brasil);
+}
+
+.principal {
+    padding: 30px 0;
+}
+
+.cabecalho-pagina {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho-pagina h1 {
+    color: var(--azul-brasil);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.cabecalho-pagina p {
+    color: var(--cinza-escuro);
+    font-size: 1.2em;
+}
+
+.cabecalho-pagina i {
+    color: var(--verde-brasil);
+    margin-right: 15px;
+}
+
+.controles-cronograma {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.seletor-mes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.botao-navegacao {
+    background: var(--branco);
+    border: 2px solid var(--cinza-medio);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--azul-brasil);
+}
+
+.botao-navegacao:hover {
+    border-color: var(--verde-brasil);
+    color: var(--verde-brasil);
+}
+
+.seletor-mes h2 {
+    color: var(--azul-brasil);
+    font-size: 1.5em;
+    min-width: 150px;
+    text-align: center;
+}
+
+.botoes-visualizacao {
+    display: flex;
+    background: var(--branco);
+    border-radius: 8px;
+    padding: 4px;
+    border: 2px solid var(--cinza-medio);
+}
+
+.botao-visualizacao {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--cinza-escuro);
+}
+
+.botao-visualizacao.ativo {
+    background: var(--verde-brasil);
+    color: var(--branco);
+}
+
+.botao-visualizacao:hover:not(.ativo) {
+    background: var(--cinza-claro);
+}
+
+.acoes-cronograma {
+    display: flex;
+    gap: 10px;
+}
+
+.botao-primario {
+    background: var(--verde-brasil);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+}
+
+.botao-primario:hover {
+    background: var(--azul-brasil);
+}
+
+.botao-secundario {
+    background: var(--branco);
+    color: var(--azul-brasil);
+    border: 2px solid var(--cinza-medio);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.botao-secundario:hover {
+    border-color: var(--verde-brasil);
+    color: var(--verde-brasil);
+}
+
+.visao-mensal {
+    background: var(--branco);
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.cabecalho-calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: linear-gradient(135deg, var(--verde-brasil), var(--azul-brasil));
+    color: var(--branco);
+    font-weight: 600;
+}
+
+.dia-semana {
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dia-semana:last-child {
+    border-right: none;
+}
+
+.grade-calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 120px;
+}
+
+.dia-calendario {
+    border: 1px solid var(--cinza-medio);
+    padding: 8px;
+    position: relative;
+    background: var(--branco);
+    transition: background 0.3s ease;
+}
+
+.dia-calendario:hover {
+    background: var(--cinza-claro);
+}
+
+.dia-calendario.fora-mes {
+    background: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    opacity: 0.5;
+}
+
+.dia-calendario.hoje {
+    background: #fff9e6;
+    border: 2px solid var(--amarelo-brasil);
+}
+
+.numero-dia {
+    font-weight: 600;
+    color: var(--azul-brasil);
+    font-size: 1.1em;
+}
+
+.dia-calendario.fora-mes .numero-dia {
+    color: var(--cinza-escuro);
+}
+
+.marcador-hoje {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: var(--amarelo-brasil);
+    color: var(--azul-brasil);
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.tarefas-dia {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.tarefa {
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    color: var(--branco);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.hora-tarefa {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.titulo-tarefa {
+    font-weight: 500;
+}
+
+.tarefa.matematica { background: #e74c3c; }
+.tarefa.portugues { background: #3498db; }
+.tarefa.fisica { background: #9b59b6; }
+.tarefa.quimica { background: #1abc9c; }
+.tarefa.biologia { background: #2ecc71; }
+.tarefa.historia { background: #f39c12; }
+.tarefa.geografia { background: #d35400; }
+.tarefa.redacao { background: #c0392b; }
+.tarefa.simulados { background: #8e44ad; }
+.tarefa.revisao { background: #16a085; }
+
+.painel-lateral {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.cartao-hoje,
+.cartao-proximos-eventos,
+.cartao-metas {
+    background: var(--branco);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho-cartao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--cinza-medio);
+}
+
+.cabecalho-cartao h3 {
+    color: var(--azul-brasil);
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecalho-cartao i {
+    color: var(--verde-brasil);
+}
+
+.data-hoje {
+    color: var(--cinza-escuro);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.lista-tarefas-hoje {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tarefa-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.tarefa-item:hover {
+    background: var(--cinza-claro);
+}
+
+.tarefa-item.concluida {
+    opacity: 0.7;
+}
+
+.tarefa-item.atrasada {
+    border-left: 4px solid var(--vermelho-alerta);
+}
+
+.check-tarefa {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tarefa-item.concluida .check-tarefa {
+    background: var(--verde-sucesso);
+    color: var(--branco);
+}
+
+.tarefa-item.atrasada .check-tarefa {
+    background: var(--vermelho-alerta);
+    color: var(--branco);
+}
+
+.circulo-pendente {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--cinza-medio);
+    border-radius: 50%;
+}
+
+.info-tarefa {
+    flex: 1;
+}
+
+.info-tarefa h4 {
+    color: var(--azul-brasil);
+    margin-bottom: 4px;
+    font-size: 1em;
+}
+
+.info-tarefa p {
+    color: var(--cinza-escuro);
+    font-size: 0.85em;
+}
+
+.acoes-tarefa .botao-acao {
+    background: transparent;
+    border: none;
+    color: var(--cinza-escuro);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
+
+.acoes-tarefa .botao-acao:hover {
+    color: var(--verde-brasil);
+}
+
+.resumo-hoje {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    border-top: 1px solid var(--cinza-medio);
+}
+
+.estatistica-hoje {
+    text-align: center;
+}
+
+.estatistica-hoje .valor {
+    display: block;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--verde-brasil);
+    margin-bottom: 5px;
+}
+
+.estatistica-hoje .rotulo {
+    font-size: 0.8em;
+    color: var(--cinza-escuro);
+}
+
+.lista-eventos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.evento-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.evento-item:hover {
+    background: var(--cinza-claro);
+}
+
+.evento-item.importante {
+    border-left: 4px solid var(--amarelo-brasil);
+}
+
+.icone-evento {
+    width: 40px;
+    height: 40px;
+    background: var(--cinza-claro);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde-brasil);
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+
+.info-evento {
+    flex: 1;
+}
+
+.info-evento h4 {
+    color: var(--azul-brasil);
+    margin-bottom: 4px;
+    font-size: 1em;
+}
+
+.info-evento p {
+    color: var(--cinza-escuro);
+    font-size: 0.85em;
+}
+
+.tag-evento {
+    background: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.lista-metas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.meta-item {
+    padding: 15px;
+    background: var(--cinza-claro);
+    border-radius: 8px;
+}
+
+.info-meta h4 {
+    color: var(--azul-brasil);
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.barra-progresso-meta {
+    width: 100%;
+    height: 8px;
+    background: var(--cinza-medio);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.barra-progresso-meta .preenchimento {
+    height: 100%;
+    background: linear-gradient(90deg, var(--verde-brasil), var(--azul-brasil));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.porcentagem-meta {
+    color: var(--cinza-escuro);
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.rodape {
+    background: linear-gradient(135deg, var(--azul-brasil) 0%, var(--verde-brasil) 100%);
+    color: var(--branco);
+    padding: 40px 0 20px;
+}
+
+.conteudo-rodape {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.secao-rodape h4 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.secao-rodape p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.secao-rodape i {
+    margin-right: 10px;
+    color: var(--amarelo-brasil);
+}
+
+.links-sociais {
+    display: flex;
+    gap: 15px;
+}
+
+.links-sociais a {
+    color: var(--branco);
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+.links-sociais a:hover {
+    color: var(--amarelo-brasil);
+}
+
+.base-rodape {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+    .painel-lateral {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navegacao ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .controles-cronograma {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .seletor-mes {
+        justify-content: center;
+    }
+
+    .botoes-visualizacao {
+        justify-content: center;
+    }
+
+    .acoes-cronograma {
+        justify-content: center;
+    }
+
+    .cabecalho-calendario,
+    .grade-calendario {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .dia-calendario {
+        min-height: 80px;
+    }
+
+    .tarefa {
+        font-size: 0.65em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho-calendario .dia-semana {
+        padding: 10px 5px;
+        font-size: 0.8em;
+    }
+
+    .numero-dia {
+        font-size: 0.9em;
+    }
+
+    .tarefas-dia {
+        display: none;
+    }
+
+    .painel-lateral {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-hoje,
+    .cartao-proximos-eventos,
+    .cartao-metas {
+        padding: 15px;
+    }
+}
