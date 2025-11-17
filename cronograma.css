@@ -12,9 +12,6 @@
     --cinza-claro: #f8f9fa;
     --cinza-medio: #e9ecef;
     --cinza-escuro: #495057;
-    --verde-sucesso: #28a745;
-    --vermelho-alerta: #dc3545;
-    --laranja-atencao: #fd7e14;
 }
 
 body {
@@ -25,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -66,45 +63,12 @@ body {
     transition: color 0.3s ease;
 }
 
-.navegacao a:hover {
+.navegacao a:hover, .navegacao a.ativo {
     color: var(--amarelo-brasil);
-}
-
-.navegacao a.ativo {
-    color: var(--amarelo-brasil);
-    border-bottom: 2px solid var(--amarelo-brasil);
 }
 
 .navegacao i {
     margin-right: 8px;
-}
-
-.menu-usuario {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.info-usuario {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 8px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    transition: background 0.3s ease;
-}
-
-.info-usuario:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.info-usuario img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid var(--amarelo-brasil);
 }
 
 .principal {
@@ -209,11 +173,10 @@ body {
 .botao-primario {
     background: var(--verde-brasil);
     color: var(--branco);
-    border: none;
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
-    cursor: pointer;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -222,25 +185,6 @@ body {
 
 .botao-primario:hover {
     background: var(--azul-brasil);
-}
-
-.botao-secundario {
-    background: var(--branco);
-    color: var(--azul-brasil);
-    border: 2px solid var(--cinza-medio);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-}
-
-.botao-secundario:hover {
-    border-color: var(--verde-brasil);
-    color: var(--verde-brasil);
 }
 
 .visao-mensal {
@@ -262,17 +206,12 @@ body {
 .dia-semana {
     padding: 15px;
     text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.dia-semana:last-child {
-    border-right: none;
 }
 
 .grade-calendario {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 120px;
+    grid-auto-rows: 100px;
 }
 
 .dia-calendario {
@@ -280,11 +219,6 @@ body {
     padding: 8px;
     position: relative;
     background: var(--branco);
-    transition: background 0.3s ease;
-}
-
-.dia-calendario:hover {
-    background: var(--cinza-claro);
 }
 
 .dia-calendario.fora-mes {
@@ -324,22 +258,17 @@ body {
     margin-top: 5px;
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
 }
 
 .tarefa {
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 0.75em;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.7em;
     color: var(--branco);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-
-.hora-tarefa {
-    font-weight: 600;
-    margin-right: 4px;
 }
 
 .titulo-tarefa {
@@ -359,7 +288,7 @@ body {
 
 .painel-lateral {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
@@ -412,11 +341,6 @@ body {
     gap: 12px;
     padding: 12px;
     border-radius: 8px;
-    transition: background 0.3s ease;
-}
-
-.tarefa-item:hover {
-    background: var(--cinza-claro);
 }
 
 .tarefa-item.concluida {
@@ -424,7 +348,7 @@ body {
 }
 
 .tarefa-item.atrasada {
-    border-left: 4px solid var(--vermelho-alerta);
+    border-left: 4px solid #dc3545;
 }
 
 .check-tarefa {
@@ -438,12 +362,12 @@ body {
 }
 
 .tarefa-item.concluida .check-tarefa {
-    background: var(--verde-sucesso);
+    background: #28a745;
     color: var(--branco);
 }
 
 .tarefa-item.atrasada .check-tarefa {
-    background: var(--vermelho-alerta);
+    background: #dc3545;
     color: var(--branco);
 }
 
@@ -467,20 +391,6 @@ body {
 .info-tarefa p {
     color: var(--cinza-escuro);
     font-size: 0.85em;
-}
-
-.acoes-tarefa .botao-acao {
-    background: transparent;
-    border: none;
-    color: var(--cinza-escuro);
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 4px;
-    transition: color 0.3s ease;
-}
-
-.acoes-tarefa .botao-acao:hover {
-    color: var(--verde-brasil);
 }
 
 .resumo-hoje {
@@ -519,11 +429,6 @@ body {
     gap: 12px;
     padding: 12px;
     border-radius: 8px;
-    transition: background 0.3s ease;
-}
-
-.evento-item:hover {
-    background: var(--cinza-claro);
 }
 
 .evento-item.importante {
@@ -558,15 +463,6 @@ body {
     font-size: 0.85em;
 }
 
-.tag-evento {
-    background: var(--cinza-claro);
-    color: var(--cinza-escuro);
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.75em;
-    font-weight: 600;
-}
-
 .lista-metas {
     display: flex;
     flex-direction: column;
@@ -598,7 +494,6 @@ body {
     height: 100%;
     background: linear-gradient(90deg, var(--verde-brasil), var(--azul-brasil));
     border-radius: 4px;
-    transition: width 0.5s ease;
 }
 
 .porcentagem-meta {
@@ -657,12 +552,6 @@ body {
     opacity: 0.8;
 }
 
-@media (max-width: 1200px) {
-    .painel-lateral {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (max-width: 768px) {
     .cabecalho .container {
         flex-direction: column;
@@ -692,17 +581,16 @@ body {
         justify-content: center;
     }
 
-    .cabecalho-calendario,
-    .grade-calendario {
-        grid-template-columns: repeat(7, 1fr);
+    .painel-lateral {
+        grid-template-columns: 1fr;
     }
 
-    .dia-calendario {
-        min-height: 80px;
+    .grade-calendario {
+        grid-auto-rows: 80px;
     }
 
     .tarefa {
-        font-size: 0.65em;
+        font-size: 0.6em;
     }
 }
 
@@ -714,14 +602,6 @@ body {
 
     .numero-dia {
         font-size: 0.9em;
-    }
-
-    .tarefas-dia {
-        display: none;
-    }
-
-    .painel-lateral {
-        grid-template-columns: 1fr;
     }
 
     .cartao-hoje,
