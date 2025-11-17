@@ -12,9 +12,6 @@
     --cinza-claro: #f8f9fa;
     --cinza-medio: #e9ecef;
     --cinza-escuro: #495057;
-    --verde-sucesso: #28a745;
-    --vermelho-alerta: #dc3545;
-    --laranja-atencao: #fd7e14;
 }
 
 body {
@@ -66,45 +63,12 @@ body {
     transition: color 0.3s ease;
 }
 
-.navegacao a:hover {
+.navegacao a:hover, .navegacao a.ativo {
     color: var(--amarelo-brasil);
-}
-
-.navegacao a.ativo {
-    color: var(--amarelo-brasil);
-    border-bottom: 2px solid var(--amarelo-brasil);
 }
 
 .navegacao i {
     margin-right: 8px;
-}
-
-.menu-usuario {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.info-usuario {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 8px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    transition: background 0.3s ease;
-}
-
-.info-usuario:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.info-usuario img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid var(--amarelo-brasil);
 }
 
 .principal {
@@ -321,21 +285,19 @@ body {
 .botao-inscrever {
     background: var(--amarelo-brasil);
     color: var(--azul-brasil);
-    border: none;
     padding: 15px 30px;
     border-radius: 8px;
     font-size: 1.1em;
     font-weight: 600;
-    cursor: pointer;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .botao-inscrever:hover {
     background: #ffd700;
-    transform: translateY(-2px);
 }
 
 .contagem-regressiva {
@@ -371,20 +333,6 @@ body {
     color: var(--verde-brasil);
 }
 
-.link-ver-todos {
-    color: var(--verde-brasil);
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: color 0.3s ease;
-}
-
-.link-ver-todos:hover {
-    color: var(--azul-brasil);
-}
-
 .grade-simulados {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -397,12 +345,11 @@ body {
     border: 2px solid var(--cinza-medio);
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .cartao-simulado:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     border-color: var(--verde-brasil);
 }
 
@@ -424,8 +371,6 @@ body {
 
 .tag-simulado.enem { background: #e74c3c; }
 .tag-simulado.fuvest { background: #3498db; }
-.tag-simulado.unicamp { background: #9b59b6; }
-.tag-simulado.geral { background: #1abc9c; }
 
 .status {
     padding: 4px 8px;
@@ -436,17 +381,7 @@ body {
 
 .status.disponivel {
     background: #e8f5e8;
-    color: var(--verde-sucesso);
-}
-
-.status.andamento {
-    background: #fff3cd;
-    color: #856404;
-}
-
-.status.concluido {
-    background: #e6f3ff;
-    color: #0984e3;
+    color: #28a745;
 }
 
 .conteudo-cartao {
@@ -492,11 +427,10 @@ body {
 .botao-iniciar {
     background: var(--verde-brasil);
     color: var(--branco);
-    border: none;
     padding: 12px 20px;
     border-radius: 6px;
     font-weight: 600;
-    cursor: pointer;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -515,7 +449,7 @@ body {
 
 .cabecalho-tabela {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 15px;
     padding: 15px 0;
     border-bottom: 2px solid var(--cinza-medio);
@@ -525,7 +459,7 @@ body {
 
 .linha-tabela {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 15px;
     padding: 20px 0;
     border-bottom: 1px solid var(--cinza-medio);
@@ -570,77 +504,6 @@ body {
     height: 100%;
     background: linear-gradient(90deg, var(--verde-brasil), var(--azul-brasil));
     border-radius: 3px;
-}
-
-.posicao {
-    font-weight: 600;
-}
-
-.botao-acao {
-    background: transparent;
-    border: none;
-    color: var(--cinza-escuro);
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    margin-right: 5px;
-}
-
-.botao-acao:hover {
-    background: var(--cinza-claro);
-    color: var(--verde-brasil);
-}
-
-.grade-melhores-resultados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.cartao-resultado {
-    background: var(--branco);
-    border: 2px solid var(--cinza-medio);
-    border-radius: 12px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    transition: all 0.3s ease;
-}
-
-.cartao-resultado:hover {
-    border-color: var(--amarelo-brasil);
-    transform: translateY(-3px);
-}
-
-.posicao-destaque {
-    font-size: 2em;
-    font-weight: bold;
-    color: var(--amarelo-brasil);
-    min-width: 50px;
-}
-
-.info-resultado h4 {
-    color: var(--azul-brasil);
-    margin-bottom: 5px;
-}
-
-.info-resultado p {
-    color: var(--verde-brasil);
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.data-resultado {
-    color: var(--cinza-escuro);
-    font-size: 0.8em;
-}
-
-.medalha {
-    color: var(--amarelo-brasil);
-    font-size: 1.5em;
 }
 
 .dicas-simulados {
@@ -715,21 +578,6 @@ body {
     color: var(--amarelo-brasil);
 }
 
-.links-sociais {
-    display: flex;
-    gap: 15px;
-}
-
-.links-sociais a {
-    color: var(--branco);
-    font-size: 1.3em;
-    transition: color 0.3s ease;
-}
-
-.links-sociais a:hover {
-    color: var(--amarelo-brasil);
-}
-
 .base-rodape {
     text-align: center;
     padding-top: 20px;
@@ -762,10 +610,6 @@ body {
         justify-content: center;
     }
 
-    .caracteristicas-simulado {
-        justify-content: center;
-    }
-
     .cabecalho-tabela,
     .linha-tabela {
         grid-template-columns: 1fr;
@@ -782,15 +626,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .estatisticas-rapidas {
-        grid-template-columns: 1fr;
-    }
-
-    .grade-melhores-resultados {
-        grid-template-columns: 1fr;
-    }
-
-    .lista-dicas {
+    .estatisticas-rapidas, .lista-dicas {
         grid-template-columns: 1fr;
     }
 
